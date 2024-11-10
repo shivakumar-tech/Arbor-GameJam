@@ -1,0 +1,154 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(to bottom right, #CB6AE6, #5BE1E6);
+}
+
+/* Form container styling */
+.container {
+    width: 90%;
+    max-width: 400px;  /* Prevents the container from exceeding a certain width */
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Form container with background color */
+.form-container {
+    background-color: #fff;  /* White background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Step indicator styling */
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #fc466b, #3f5efb);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.step:not(:last-child) {
+    margin-right: 5px;
+}
+
+/* Header styling */
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Input field styling */
+input[type="email"],
+input[type="text"],
+textarea,
+select {
+    width: 100%;  /* Ensures the input fields take the full width of the container */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box; /* Prevents overflow by including padding in width calculation */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+/* Focus Effects */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #3f5efb; /* Blue border on focus */
+    background-color: #fff;
+}
+
+/* Hidden class for steps */
+.hidden {
+    display: none;
+}
+
+/* Button styling */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #5BE1E6, #CB6AE6); 
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(63, 94, 251, 0.5);
+}
+
+/* Label styling */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling for checkboxes and radio buttons */
+#step3 label,
+#step4 label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Checkbox and radio button margin adjustments */
+#step3 input[type="checkbox"],
+#step4 input[type="radio"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Left align content for step 3 (checkboxes) */
+#step3 {
+    text-align: left;
+    width: 100%;
+}
+
+/* Left align content for step 4 (radio buttons) */
+#step4 {
+    text-align: left;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

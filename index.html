@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers Odyssey - Arbor Int'l School</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: ;
+            --secondary-color: #1e40af;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #67e1e4 0%, #c86ae3 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+            animation: move 30s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .theme-card {
+            transition: transform 0.3s ease;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .accordion-header {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 1000px;
+        }
+        .gradient-heading {
+            background: linear-gradient(135deg, rgba(103, 225, 228, 0.9) 0%, rgba(200, 106, 227, 0.9) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4 -ml-4">
+                <img class="logo" src="Logo-removebg-preview.png" alt="logo" height="50px" width="50px">
+                <a href="#" class="text-2xl font-bold text-gray-700">Designer's Odyssey</a>
+            </div>
+            <div class="space-x-6">
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600">Home</a>
+                <a href="registrationform.html" class="nav-link text-gray-700 hover:text-blue-600" target="_blank">Registration</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 py-24 relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                    <span class="block">Compete, Create, Conquer!</span>
+                </h1>
+                <p class="text-xl text-blue-100 mb-8">Join Arbor International School's ultimate design competition</p>
+                <br>
+                <a href="#themes"
+                    class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                    Explore Themes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section id="themes" class="py-20 bg-gray-50" style="background-color: #f1edf1;">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-heading">Competition Categories</h2>
+
+            <!-- Senior Category -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center mb-8">Senior Category (Grade 9-12)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 3D Modeling -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">3D Modeling</h4>
+                        <p class="text-gray-600 mb-4">Theme: Everyday Objects with a Twist</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Blender (recommended)</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Attention to Detail</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Product Design -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">Product Design</h4>
+                        <p class="text-gray-600 mb-4">Theme: Smart Living</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Blender (recommended)</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Usability</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">Graphic Design</h4>
+                        <p class="text-gray-600 mb-4">Theme: Brand Identity</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Canva, Photoshop</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Attention to Detail</li>
+                                <li>Animation</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Game Development -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">Game Development</h4>
+                        <p class="text-gray-600 mb-4">Theme: Upside Down World</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Unity, Unreal Engine, Roblox Studio</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Game Design Document</li>
+                                <li>Functionality</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Junior Category -->
+            <div>
+                <h3 class="text-2xl font-bold text-center mb-8">Junior Category (Grade 6-8)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 3D Modeling -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">3D Modeling</h4>
+                        <p class="text-gray-600 mb-4">Theme: Fantasy Vehicle</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Blender (recommended)</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Attention to Detail</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Product Design -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">Product Design</h4>
+                        <p class="text-gray-600 mb-4">Theme: Ultimate School Supplies</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Blender (recommended)</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Usability</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">Graphic Design</h4>
+                        <p class="text-gray-600 mb-4">Theme: Personal Brand Logo</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Canva, Photoshop</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Attention to Detail</li>
+                                <li>Animation</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Game Development -->
+                    <div class="theme-card bg-white p-6 rounded-lg shadow-lg">
+                        <h4 class="text-xl font-bold mb-4">Game Development</h4>
+                        <p class="text-gray-600 mb-4">Theme: Escape the Room</p>
+                        <div class="space-y-2">
+                            <p class="text-sm">Tools: Unity, Unreal Engine</p>
+                            <p class="text-sm font-semibold">Judging Criteria:</p>
+                            <ul class="text-sm list-disc list-inside text-gray-600">
+                                <li>Adherence to Theme</li>
+                                <li>Creative and Originality</li>
+                                <li>Game Design Document</li>
+                                <li>Functionality</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section class="py-20" style="background-color: #f1edf1;">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-heading">Prize Pool</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Senior Category -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Senior Category (Grade 9-12)</h3>
+                    <div class="space-y-4">
+                        <div
+                            class="theme-card bg-gradient-to-r from-yellow-500 to-yellow-400 p-6 rounded-lg text-white">
+                            <h4 class="text-xl font-bold mb-2">First Place</h4>
+                            <p class="text-3xl font-bold">₹2,000</p>
+                            <p class="text-sm mt-2">Per Category</p>
+                        </div>
+                        <div class="theme-card bg-gradient-to-r from-gray-400 to-gray-300 p-6 rounded-lg text-white">
+                            <h4 class="text-xl font-bold mb-2">Second Place</h4>
+                            <p class="text-3xl font-bold">₹1,250</p>
+                            <p class="text-sm mt-2">Per Category</p>
+                        </div>
+                        <div
+                            class="theme-card bg-gradient-to-r from-yellow-700 to-yellow-600 p-6 rounded-lg text-white">
+                            <h4 class="text-xl font-bold mb-2">Third Place</h4>
+                            <p class="text-3xl font-bold">₹750</p>
+                            <p class="text-sm mt-2">Per Category</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Junior Category -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Junior Category (Grade 6-8)</h3>
+                    <div class="space-y-4">
+                        <div
+                            class="theme-card bg-gradient-to-r from-yellow-500 to-yellow-400 p-6 rounded-lg text-white">
+                            <h4 class="text-xl font-bold mb-2">First Place</h4>
+                            <p class="text-3xl font-bold">₹1,500</p>
+                            <p class="text-sm mt-2">Per Category</p>
+                        </div>
+                        <div class="theme-card bg-gradient-to-r from-gray-400 to-gray-300 p-6 rounded-lg text-white">
+                            <h4 class="text-xl font-bold mb-2">Second Place</h4>
+                            <p class="text-3xl font-bold">₹1,000</p>
+                            <p class="text-sm mt-2">Per Category</p>
+                        </div>
+                        <div
+                            class="theme-card bg-gradient-to-r from-yellow-700 to-yellow-600 p-6 rounded-lg text-white">
+                            <h4 class="text-xl font-bold mb-2">Third Place</h4>
+                            <p class="text-3xl font-bold">₹500</p>
+                            <p class="text-sm mt-2">Per Category</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+                <!-- FAQ Section -->
+                <section id="faq" class="min-h-screen py-20 bg-gray-100 flex items-center justify-center" style="background-color: #f1edf1;">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-3xl font-bold text-center mb-12 gradient-heading">Frequently Asked Questions</h2>
+
+                        <div class="space-y-6 max-w-4xl w-full mx-auto">
+                            <!-- Accordion Item 1 -->
+                            <div class="accordion-item bg-white p-6 rounded-lg shadow-lg mx-auto">
+                                <div class="accordion-header text-xl font-semibold cursor-pointer">
+                                    What is Designers Odyssey?
+                                </div>
+                                <div class="accordion-content mt-4 text-gray-600">
+                                    <p>Designers Odyssey is a design competition organized by Arbor International
+                                        School, where students can showcase their creativity and design skills in
+                                        various categories, including 3D Modeling, Product Design, Graphic Design, and
+                                        Game Development.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 2 -->
+                            <div class="accordion-item bg-white p-6 rounded-lg shadow-lg mx-auto">
+                                <div class="accordion-header text-xl font-semibold cursor-pointer">
+                                    How can I register for the competition?
+                                </div>
+                                <div class="accordion-content mt-4 text-gray-600">
+                                    <p>You can register for the competition by visiting the <a
+                                            href="registrationform.html" class="text-blue-600" target="_blank">registration
+                                            page</a> on our website. Fill out the form with your details and submit your
+                                        entry.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 3 -->
+                            <div class="accordion-item bg-white p-6 rounded-lg shadow-lg mx-auto">
+                                <div class="accordion-header text-xl font-semibold cursor-pointer">
+                                    What are the judging criteria?
+                                </div>
+                                <div class="accordion-content mt-4 text-gray-600">
+                                    <p>The judging criteria vary by category but typically include factors such as
+                                        adherence to theme, creativity, originality, attention to detail, and overall
+                                        presentation of the work.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 4 -->
+                            <div class="accordion-item bg-white p-6 rounded-lg shadow-lg mx-auto">
+                                <div class="accordion-header text-xl font-semibold cursor-pointer">
+                                    Can I participate in multiple categories?
+                                </div>
+                                <div class="accordion-content mt-4 text-gray-600">
+                                    <p>Yes, you are allowed to participate in multiple categories, provided you meet the
+                                        eligibility requirements for each category.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 5 -->
+                            <div class="accordion-item bg-white p-6 rounded-lg shadow-lg mx-auto">
+                                <div class="accordion-header text-xl font-semibold cursor-pointer">
+                                    When is the deadline for submissions?
+                                </div>
+                                <div class="accordion-content mt-4 text-gray-600">
+                                    <p>The deadline for submissions will be communicated on the registration page and
+                                        via email after you register. Make sure to submit your designs before the
+                                        specified deadline to be eligible for judging.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Accordion Script -->
+                <script>
+                    document.querySelectorAll('.accordion-header').forEach(header => {
+                        header.addEventListener('click', function () {
+                            const content = this.nextElementSibling;
+                            const isActive = content.classList.contains('active');
+
+                            // Close all open accordion content
+                            document.querySelectorAll('.accordion-content').forEach(item => item.classList.remove('active'));
+
+                            // If it's not already open, open it
+                            if (!isActive) {
+                                content.classList.add('active');
+                            }
+                        });
+                    });
+                </script>

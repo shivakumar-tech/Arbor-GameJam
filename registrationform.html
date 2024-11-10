@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regsiter for Designer's Odyssey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form id="accountForm">
+          <!-- Step 1: Basic Information -->
+          <div id="step1">
+           <!--  <button type="button" id="backToHomeButton" class="btn">
+              <a href="#/gamejam/designers-odyssey-updated.html">
+                Back to Home</a
+              >
+            </button> -->
+
+            <h2>REGISTER FOR DESIGNER'S ODYSSEY</h2>
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="text" id="teamName" placeholder="Team name" required />
+            <br />
+            <!-- Dropdown for Number of Team Members -->
+            <label for="teamMembers">Number of Team Members</label>
+            <select id="teamMembers" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button type="button" id="nextButton" class="btn">Next</button>
+          </div>
+
+          <!-- Step 2: Team Member Information -->
+          <div id="step2" class="hidden">
+            <button type="button" id="previousStep1" class="btn">
+              Previous
+            </button>
+            <h2>Team Members</h2>
+            <input
+              type="text"
+              id="teamMember1"
+              placeholder="Enter name of team member 1"
+              required
+            />
+            <input
+              type="text"
+              id="teamMember2"
+              placeholder="Enter name of team member 2 (or type 'NONE')"
+            />
+            <input
+              type="text"
+              id="teamMember3"
+              placeholder="Enter name of team member 3 (or type 'NONE')"
+            />
+            <button type="button" id="nextStep2" class="btn">Next</button>
+          </div>
+
+          <!-- Step 3: Participation Categories -->
+          <div id="step3" class="hidden">
+            <button type="button" id="previousStep2" class="btn">
+              Previous
+            </button>
+            <h2>Participation Categories</h2>
+            <label
+              ><input type="checkbox" name="category" value="3D Modelling" /> 3D
+              Modelling</label
+            ><br />
+            <label
+              ><input type="checkbox" name="category" value="Product Design" />
+              Product Design</label
+            ><br />
+            <label
+              ><input type="checkbox" name="category" value="Graphic Design" />
+              Graphic Design</label
+            ><br />
+            <label
+              ><input
+                type="checkbox"
+                name="category"
+                value="Game Development"
+              />
+              Game Development</label
+            ><br />
+            <!-- <button type="submit" id="submitButton" class="btn">Submit</button> -->
+            <button type="button" id="nextStep3" class="btn">Next</button>
+          </div>
+          <!-- Step 4: Participation Category (Senior or Junior) -->
+          <div id="step4" class="hidden">
+            <button type="button" id="previousStep3" class="btn">
+              Previous
+            </button>
+            <h2>Team Participation Category</h2>
+
+            <label>
+              <input type="radio" name="category" value="Senior" />
+              Senior </label
+            ><br />
+            <label>
+              <input type="radio" name="category" value="Junior" />
+              Junior </label
+            ><br />
+
+            <button type="submit" id="submitButton" class="btn">Submit</button>
+            <button type="button" id="exportButton" class="btn">
+              Export to Excel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Include the XLSX library before your main script -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
